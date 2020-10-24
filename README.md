@@ -4,22 +4,27 @@ A moving map for that connects MSFS 2020 to SkyVector.com
 
 ## Status
 
-[msfs2020-skyvector](https://github.com/MoMadenU/msfs2020-skyvector) package currently being released as a beta. 
+[msfs2020-skyvector](https://github.com/MoMadenU/msfs2020-skyvector) currently being released as a beta. 
 
 ## Releases and Download
 
-program zips releases are uploaded [here](https://github.com/lian/msfs2020-go/releases)
+program zips releases are uploaded [here](/MoMadenU/msfs2020-skyvector/releases)
 
 ## Components
 
-* [vfrmap](vfrmap/) local web-server that will allow you to view your location, and some information about your trajectory including airspeed and altitude.
+* [FSWebService](FSWebService/) local web service that uses simconnect to talk to the sim
+* [SkyVectorMovingMap](SkyVectorMovingMap/) Chrome Extension that requests position information from the web service
 
-## examples
+## Install caveats
 
-* [examples/request_data](examples/request_data/) port of `MSFS-SDK/Samples/SimConnectSamples/RequestData/RequestData.cpp`
+For this first release you must run the webservice on the same machine as the sim and **you must launch it as Administrator**
 
-## Why does my virus-scanning software think this program is infected?
+## Is it safe to run the web service on my machine ?
 
-From official golang website https://golang.org/doc/faq#virus
+Steps have been taken to secure the use of the web service:
+* Web service and sim must be on same machine (IP)
+* A CORS header is in place to only allow Skyvector.com or localhost to use the seervice
+* the service only supports a get and care has been taken to exclude anything suspicious such as injections
+
 
 "This is a common occurrence, especially on Windows machines, and is almost always a false positive. Commercial virus scanning programs are often confused by the structure of Go binaries, which they don't see as often as those compiled from other languages."
