@@ -29,4 +29,4 @@ Steps have been taken to secure the use of the web service:
 * the service currently supports a GET only and the code will exclude anything suspicious such as injection attempts
 * The default port is 8001 which you can change (see comprehensive install google doc). Please be sure the port you use is not open on your router
 
-**Please Read the [Google Doc](https://github.com/MoMadenU/msfs2020-skyvector/docs/install.doc)  for a comprehensive guide on how to install**
+**Please Read the [Google Doc](https://github.com/MoMadenU/msfs2020-skyvector/blob/main/MSFS%202020%20SkyVector%20Moving%20map.docx)  for a comprehensive guide on how to install**
