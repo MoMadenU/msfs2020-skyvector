@@ -1,6 +1,6 @@
 # msfs2020-skyvector
 
-A moving map for that connects MSFS 2020 to SkyVector.com. A preview of it working can be found [Here](https://youtu.be/mP5gA6EbgHw)
+A moving map that connects MSFS 2020 to SkyVector. A preview of it working can be found [Here](https://youtu.be/mP5gA6EbgHw)
 
 ## Status
 
