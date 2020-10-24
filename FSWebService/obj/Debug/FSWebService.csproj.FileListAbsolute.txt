@@ -1,0 +1,12 @@
+F:\msfs2020-skyvector\FSWebService\bin\Debug\FSWebService.exe.config
+F:\msfs2020-skyvector\FSWebService\bin\Debug\FSWebService.exe
+F:\msfs2020-skyvector\FSWebService\bin\Debug\FSWebService.pdb
+F:\msfs2020-skyvector\FSWebService\bin\Debug\Microsoft.FlightSimulator.SimConnect.dll
+F:\msfs2020-skyvector\FSWebService\obj\Debug\FSWebService.csprojAssemblyReference.cache
+F:\msfs2020-skyvector\FSWebService\obj\Debug\FSWebService.FSWebServiceForm.resources
+F:\msfs2020-skyvector\FSWebService\obj\Debug\FSWebService.Properties.Resources.resources
+F:\msfs2020-skyvector\FSWebService\obj\Debug\FSWebService.csproj.GenerateResource.cache
+F:\msfs2020-skyvector\FSWebService\obj\Debug\FSWebService.csproj.CoreCompileInputs.cache
+F:\msfs2020-skyvector\FSWebService\obj\Debug\FSWebService.csproj.CopyComplete
+F:\msfs2020-skyvector\FSWebService\obj\Debug\FSWebService.exe
+F:\msfs2020-skyvector\FSWebService\obj\Debug\FSWebService.pdb

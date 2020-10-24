@@ -1,10 +1,11 @@
 # msfs2020-skyvector
 
-A moving map for that connects MSFS 2020 to SkyVector.com 
+A moving map for that connects MSFS 2020 to SkyVector.com. A preview of it working can be found [Here](https://youtu.be/mP5gA6EbgHw)
 
 ## Status
 
-[msfs2020-skyvector](https://github.com/MoMadenU/msfs2020-skyvector) is currently being released as a beta. 
+[msfs2020-skyvector](https://github.com/MoMadenU/msfs2020-skyvector) is currently being released as a beta.
+Only Google Chrome is being support at this time  
 
 ## Releases and Download
 
