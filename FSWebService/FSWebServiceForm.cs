@@ -31,9 +31,36 @@ namespace FSWebService
             InitializeComponent();
 
         }
+        public void ShowRequestData (HttpListenerRequest request)
+        {
+            if (!request.HasEntityBody)
+            {
+               // Console.WriteLine("No client data was sent with the request.");
+                return;
+            }
+            System.IO.Stream body = request.InputStream;
+            System.Text.Encoding encoding = request.ContentEncoding;
+            System.IO.StreamReader reader = new System.IO.StreamReader(body, encoding);
+            if (request.ContentType != null)
+            {
+                Console.WriteLine("Client data content type {0}", request.ContentType);
+            }
+            Console.WriteLine("Client data content length {0}", request.ContentLength64);
+
+            Console.WriteLine("Start of client data:");
+            // Convert the data to a string and display it on the console.
+            string s = reader.ReadToEnd();
+            Console.WriteLine(s);
+            Console.WriteLine("End of client data:");
+            body.Close();
+            reader.Close();
+            // If you are finished with the request, it should be closed also.
+        }
 
         private string ReceiveCallback(HttpListenerRequest request) 
         {
+            ShowRequestData(request);
+
             // System.Diagnostics.Debug.WriteLine("{0}: {1}", request.UserHostAddress, request.RawUrl);
             string rawRequest = request.RawUrl;
             string[] parse = rawRequest.Split("?".ToCharArray());
@@ -50,7 +77,7 @@ namespace FSWebService
                         case "position":
                         {
                            // Debug.WriteLine($"Request: {command} params: {parmstr}");
-                            return string.Format("{{ \"type\": \"Point\", \"coordinates\": [{0}, {1}] }}",
+                            return string.Format("{{ \"type\": \"Point\", \"coordinates\": [\"{0}\", \"{1}\"] }}",
                                 simController.userPos.Latitude, simController.userPos.Longitude);
                         }
                     }
@@ -88,12 +115,12 @@ namespace FSWebService
                 animate = !animate;
                 
                 Invoke(new MethodInvoker(delegate() {mainTextBox.Text = animate ? mainTextBox.Text.Replace("■", " ")  :mainTextBox.Text.Replace(" ","■"); })); 
-                Invoke(new MethodInvoker(delegate() {simController.Connect();})); 
-                
+                Invoke(new MethodInvoker(delegate() {simController.Connect();}));
+
                 if (simController.IsConnected)
                 {
                     //   AddFirewallException();
-                    Invoke(new MethodInvoker(delegate() {mainTextBox.Text = $" Connected to Sim{Environment.NewLine} Starting Web Service...{Environment.NewLine}"; })); 
+                    Invoke(new MethodInvoker(delegate() {mainTextBox.Text = $" Connected to Sim{Environment.NewLine} Starting Web Service on port {port}...{Environment.NewLine}"; })); 
                     server = new WebServer(ReceiveCallback, "http://+:" + port + "/");
                     server.Run();
                     simStartTimer.Stop();
