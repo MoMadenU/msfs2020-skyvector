@@ -9,7 +9,7 @@ Only Google Chrome is being support at this time
 
 ## Releases and Download
 
-#Version 0.0.2 has been released
+## Version 0.0.2 has been released
 It fixes issue the extension was having with culture based lat/lon numeric values 
 
 program zips releases are [here](https://github.com/MoMadenU/msfs2020-skyvector/releases)
