@@ -9,8 +9,8 @@ Only Google Chrome is being support at this time
 
 ## Releases and Download
 
-## Version 0.0.2 has been released
-It fixes issue the extension was having with culture based lat/lon numeric values 
+## Version 0.0.3 has been released
+Web service now forces lat/lon values to decimal point 
 
 program zips releases are [here](https://github.com/MoMadenU/msfs2020-skyvector/releases)
 
