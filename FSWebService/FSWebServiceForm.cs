@@ -78,7 +78,7 @@ namespace FSWebService
                         {
                            // Debug.WriteLine($"Request: {command} params: {parmstr}");
                             return string.Format("{{ \"type\": \"Point\", \"coordinates\": [\"{0}\", \"{1}\"] }}",
-                                simController.userPos.Latitude, simController.userPos.Longitude);
+                                simController.userPos.Latitude.ToString().Replace(",","."), simController.userPos.Longitude.ToString().Replace(",","."));
                         }
                     }
 
